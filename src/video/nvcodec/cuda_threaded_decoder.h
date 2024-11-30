@@ -79,7 +79,7 @@ class CUThreadedDecoder final : public ThreadedDecoderInterface {
         void LaunchThreadImpl();
         void RecordInternalError(std::string message);
         void CheckErrorStatus();
-        void InitBitStreamFilter(AVCodecParameters *codecpar, AVInputFormat *iformat);
+        void InitBitStreamFilter(AVCodecParameters *codecpar, const AVInputFormat *iformat);
 
         int device_id_;
         CUStream stream_;
